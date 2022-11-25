@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: rgb(11, 11, 11);
+    --text-color: rgb(194, 191, 191);
+    --primary-light-color: rgb(25, 25, 25);
+    --theme-color: rgb(235, 164, 12);
+}
+
+body {
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------header----------------*/
+.page-wrapper {
+    position: relative;
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+#logo-design {
+    cursor: pointer;
+    height: 30px;
+    width: 25px;
+    color: var(--theme-color);
+    background: var(--theme-color);
+    margin-top: 20px;
+    position: relative;
+}
+
+#logo-design::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 3.5px;
+    border-right: 3px dashed black;
+}
+
+#logo-design::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 18px;
+    border-right: 3px dashed black;
+}
+
+.logo>h2 {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-icon {
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.fa-magnifying-glass {
+    color: var(--text-color);
+    font-size: 30px;
+}
+
+
+.search-box {
+    display: block;
+}
+
+.search-box input {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-light-color);
+    position: absolute;
+    width: 100vw;
+    height: 60px;
+    top: -60px;
+    left: 0;
+    padding: 20px;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    transition: top 0.2s ease-in;
+}
+
+.search-box i {
+    display: none;
+    position: absolute;
+    right: 15px;
+    font-size: 30px;
+    top: 15px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+
+#watchlist {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 7px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 70vh;
+
+}
+
+#watchlist i {
+    color: var(--text-color);
+}
+
+#watchlist>h3 {
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+#watchlist:hover {
+    background-color: var(--primary-light-color);
+}
+
+/*-----list of movies while search-----*/
+#movies-list {
+    margin-top: 10px;
+}
+
+.movie {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    border-top: 1px solid var(--primary-light-color);
+}
+
+.movie-left {
+    display: flex;
+}
+
+.movie img {
+    height: 80px;
+    width: 70px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.movie-info {
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+.movie-info>h4 {
+    cursor: pointer;
+}
+
+.movie-info>p {
+    margin-top: 5px;
+}
+
+.favourite i {
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.favourite i:hover {
+    color: rgb(145, 15, 15);
+}
+
+.movie:hover {
+    background-color: var(--primary-light-color);
+}
+
+@media only screen and (min-width:600px) {
+
+    .page-wrapper {
+        width: 80vw;  
+    }
+
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-box input {
+        position: absolute;
+        width: 100%;
+        left: 0%;
+    }
+
+    .movie {
+        width: 80vw;
+    }
+}
+
+
+@media only screen and (min-width:800px) {
+
+    .page-wrapper {
+        width: 70vw;
+    }
+
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 60%;
+        left: 40%;
+    }
+
+    .movie {
+        position: relative;
+        width: 60%;
+        left: 40%;
+    }
+}

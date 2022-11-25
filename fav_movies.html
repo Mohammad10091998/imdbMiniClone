@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Movies</title>
+    <script src="https://kit.fontawesome.com/ffd3f97e4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fav_movies.css">
+</head>
+
+<body>
+    <div class="wrapper-page">
+        <div class="header">
+            <div class="logo">
+                <div id="logo-design"></div>
+                <h2>
+                    Watchlist
+                </h2>
+            </div>
+        </div>
+
+        <div id="movies-list">
+
+            <div class="movie-image">
+                <img src="image/mountainClimbing.jpg" alt="">
+            </div>
+            <div class="movie-info">
+                <div class = "title-delete-flex">
+                    <h2>${movie.Title}</h2>
+                    <div class="delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+               
+                <p>${movie.Year}</p>
+
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <p>${movie.imdbRating} / 10</p>
+                </div>
+                <p>${movie.imdbVotes}</p>
+                <div class="generic">
+                    <h4>Genre:</h4>
+                    <p>${movie.Genre}</p>
+                </div>
+                <div class="generic">
+                    <h4>Director:</h4>
+                    <p>${movie.Director}</p>
+                </div>
+                <div class="generic">
+                    <h4>Writer:</h4>
+                    <p>${movie.Writer}</p>
+                </div>
+                <div class="generic">
+                    <h4>Actors : </h4>
+                    <p>${movie.Actors}</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    
+    <script type="text/javascript" src="fav_moive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: rgb(11, 11, 11);
+    --text-color: rgb(194, 191, 191);
+    --primary-light-color: rgb(25, 25, 25);
+    --theme-color: rgb(235, 164, 12);
+}
+
+body {
+    background: var(--primary-color);
+   
+}
+
+/*-------logo----------*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+#logo-design {
+    cursor: pointer;
+    height: 30px;
+    width: 25px;
+    color: var(--theme-color);
+    background: var(--theme-color);
+    margin-top: 20px;
+    position: relative;
+}
+
+#logo-design::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 3.5px;
+    border-right: 3px dashed black;
+}
+
+#logo-design::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 18px;
+    border-right: 3px dashed black;
+}
+
+.logo>h2 {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/*---------movies----------*/
+#movies-list{
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    margin-top:20px;
+    margin-left:10px;   
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    padding:2px;
+    border: 2px solid rgb(130, 128, 128);
+}
+
+.movie img {
+    height: 200px;
+    width: 100%;
+    cursor: pointer;
+}
+.title-delete-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-info h2{
+    color: var(--theme-color);
+}
+.movie-info p{
+    color:var(--text-color);
+    margin-top: 5px;
+}
+.movie-info h4{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.rating{
+    display: flex;
+}
+.rating i{
+    color:var(--theme-color);
+    margin-right:5px;
+}
+.generic{
+    display: flex;
+    margin-bottom: 5px;
+}
+.delete i {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.delete i:hover {
+    color: rgb(145, 15, 15);
+}
+

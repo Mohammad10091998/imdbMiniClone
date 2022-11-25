@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <script src="https://kit.fontawesome.com/ffd3f97e4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movie_page.css">
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        console.log("Hi in movie page");
+        let movie = JSON.parse(sessionStorage.getItem('movie-info'));
+        console.log(movie);
+        const movieElement = document.createElement('div');
+        movieElement.classList.add('movie-display');
+        movieElement.innerHTML = `
+        <img src="${movie.Poster}" alt="movie-img">
+        <div class="movie-info">
+            <h1>${movie.Title}</h1>
+            <p>Year : ${movie.Year}</p>
+            <div class="rating-award">
+                <i class="fa-solid fa-star"></i>
+                <p>${movie.imdbRating} / 10</p>        
+            </div>
+            <p>${movie.imdbVotes}</p>
+            <div class="generic">
+                <h4>Genre:</h4>
+                <p>${movie.Genre}</p>
+            </div>
+            <div class="generic">
+                <h4>Director:</h4>
+                <p>${movie.Director}</p>
+            </div>
+            <div class="generic">
+                <h4>Writer:</h4>
+                <p>${movie.Writer}</p>
+            </div>
+            <div class="generic">
+                <h4>Actors : </h4>
+                <p>${movie.Actors}</p>
+            </div>
+            <div class="generic">
+                <h4>Plot:</h4>
+                <p>${movie.Plot}
+                </p>
+            </div>
+            <div class="generic">
+                <h4>Language:</h4>
+                <p>${movie.Language}
+                </p>
+            </div>
+            <div class="rating-award">
+                <i class="fa-solid fa-award"></i>
+                <p>${movie.Awards}</p>
+            </div>
+        </div>    
+        `;
+
+        document.body.appendChild(movieElement);
+    </script>
+</body>
+</html>
