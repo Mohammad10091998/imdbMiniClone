@@ -134,6 +134,9 @@ async function getMoviebyId(movieid){
 
 //logic for adding favourite movies to favourite list
 var fav_movies_id_list = JSON.parse(localStorage.getItem('movie-ids-list'));
+if(fav_movies_id_list == null){
+    fav_movies_id_list = [];
+}
 //when heart button click
 function addMovieIdToFavMovieList(movieId){
      try{

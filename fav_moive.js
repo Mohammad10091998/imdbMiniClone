@@ -7,6 +7,9 @@ const Api_Key = "cb18c2cb";
 
 
 var moviesIdsList = JSON.parse(localStorage.getItem('movie-ids-list'));
+if(moviesIdsList == null){
+    moviesIdsList = [];
+}
 
 
 async function createMovieListByMovieIds() {
